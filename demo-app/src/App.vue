@@ -6,7 +6,7 @@
     <!-- <loopingcomp/> -->
     <!-- <methodsComp/> -->
      <!-- <eventHandComp/>  -->
-     <br/>
+    
     <!-- <formHandlingComp/> -->
     <!-- <parentComp/> -->
     <!-- <getReq/>  -->
@@ -15,6 +15,7 @@
     <!-- <router-link to="/backbtn">Go to Back Button Handling Page</router-link> -->
    <!-- <a href="/form"> Go to Back Button Handling Page</a> -->
    <!-- <component :is="currentview"/> -->
+    <router-link to="/router1">Home</router-link>  
      <router-view></router-view>
   </div>
 </template>
@@ -31,15 +32,16 @@
 // import parentComp from "./components/parent.vue"
 // import getReq from "./components/getRequest.vue"
 // import postRequset from "./components/postRequset.vue" 
-import backButtonHandling from "./components/BackButtonHandling.vue"
+// import backButtonHandling from "./components/BackButtonHandling.vue"
 //  import routes from "./routes"
+
 
 export default {
   name: "App",
 
   data(){
     return {
-      currentPath:window.location.hash
+      
     }
   },
 
@@ -55,23 +57,16 @@ export default {
     // parentComp
     // getReq,
     // postRequset,
-   backButtonHandling
+  //  backButtonHandling
   },
 
 
   computed :{
-    currentview(){
-      return ""
-  // console.log(routes)
-  //      routes[this.currentPath.slice(1) || '/'] 
-  //      return routes[0].Component
-    }
+   
   },
 
   mounted() {
-    // window.addEventListener('hashchange', () => {
-		// this.currentPath=window.location.hash
-		// })
+    
   }
 
 

@@ -1,11 +1,14 @@
-import { createWebHistory, createRouter } from "vue-router";
-import backButton from "./components/BackButtonHandling.vue";
- import formHandling from "./components/formHandling.vue";
-import sucessMsg from "./components/Sucess.vue"
-// import Vue from 'vue';
-// let VueRouter = require("vue-router")
 
-// Vue.use(VueRouter)
+import VueRouter from "vue-router";
+// import backButton from "./components/BackButtonHandling.vue";
+import formHandling from "./components/formHandling.vue";
+import sucessMsg from "./components/Sucess.vue"
+
+
+import Vue from 'vue';
+
+// let VueRouter = require("vue-router")
+Vue.use(VueRouter)
 
 // const router = new VueRouter({
 //     mode: 'history',
@@ -19,22 +22,22 @@ import sucessMsg from "./components/Sucess.vue"
 
 const routes = [
   {
+    path: '/router1',
+    name: 'BackButtonHandling',
+    Component: ()=> import ('../src/components/BackButtonHandling.vue')
+
+  },
+
+
+  {
     name: "sucessMsg",
     path: "/sucessMsg",
     Component: sucessMsg
 
   },
-  {
-
-    name: "backButton",
-    path: "/",
-    Component: backButton
-
-  },
-
 
   {
-    name: "formHandling",
+  name: "formHandling",
     path: "/form",
     Component: formHandling
 
@@ -42,9 +45,9 @@ const routes = [
 ]
 
 
-const router = createRouter({
+const router = new VueRouter({
 
-  history: createWebHistory(),
+ 
   routes
 })
 
